@@ -1,10 +1,13 @@
 input.onButtonPressed(Button.A, function () {
-    dfplayermini.press(dfplayermini.playType.Play)
+    Rtraq = randint(1, 6)
+    basic.showNumber(Rtraq)
+    dfplayermini.playFile(Rtraq, dfplayermini.isRepeat.No)
 })
 input.onButtonPressed(Button.B, function () {
     dfplayermini.press(dfplayermini.playType.PlayNext)
 })
-dfplayermini.connect(SerialPin.P1, SerialPin.P0)
-dfplayermini.setVolume(15)
+let Rtraq = 0
+dfplayermini.connect(SerialPin.P0, SerialPin.P1)
+dfplayermini.setVolume(17)
 dfplayermini.setEQ(dfplayermini.EQ.Normal)
-basic.showIcon(IconNames.Angry)
+basic.showIcon(IconNames.Yes)
